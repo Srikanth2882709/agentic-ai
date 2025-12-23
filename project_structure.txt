@@ -1,0 +1,107 @@
+
+## 🗂️ Project Structure
+```
+agentic-ai/
+├── .next
+├── node_modules/                 ← Created after npm install
+├── public/
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   ├── conversations/
+│   │   │   │   ├── [id]/
+│   │   │   │   │    ├── messages/
+│   │   │   │   │    │     └── route.ts  # Send message (streaming)
+│   │   │   │   │    └── route.ts      # Get/Delete conversation
+│   │   │   │   └── route.ts          # List/Create conversations
+│   │   │   │ 
+│   │   │   ├── stream/
+│   │   │   │   └── route.ts          # SSE streaming endpoint
+│   │   │   │ 
+│   │   │   └── upload/
+│   │   │      └── route.ts          # File upload
+│   │   │   
+│   │   ├── chat/
+│   │   │   ├── [id]/
+│   │   │   │   └── page.tsx          # Chat page
+│   │   │   └── layout.tsx            # Chat layout
+│   │   │ 
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx                 # Root layout
+│   │   └── page.tsx                   # Welcome page
+│   │    
+│   ├── components/
+│   │   ├── artifacts/
+│   │   │   ├── ArtifactsPanel.tsx
+│   │   │   ├── ChartArtifact.tsx
+│   │   │   ├── CodeArtifact.tsx
+│   │   │   └── DocumentArtifact.tsx
+│   │   │
+│   │   ├── chat/
+│   │   │   ├── AIMessage.tsx
+│   │   │   ├── AttachmentButton.tsx
+│   │   │   ├── ChatContainer.tsx
+│   │   │   ├── ConnectorBar.tsx
+│   │   │   ├── InputArea.tsx
+│   │   │   ├── MessageList.tsx
+│   │   │   ├── Message.tsx
+│   │   │   ├── ThinkingProcess.tsx
+│   │   │   ├── ToolCall.tsx
+│   │   │   └── UserMessage.tsx 
+│   │   │                                           
+│   │   ├── layout/
+│   │   │   ├── AccountMenu.tsx
+│   │   │   ├── ChatHistory.tsx
+│   │   │   ├── Sidebar.tsx
+│   │   │   └── TemplateList.tsx
+│   │   │                                           
+│   │   ├── providers/
+│   │   │   ├── QueryProvider.tsx
+│   │   │   
+│   │   ├── ui/                        # shadcn/ui components
+│   │   │   ├── button.tsx
+│   │   │   ├── card.tsx
+│   │   │   ├── dialog.tsx
+│   │   │   ├── dropdown-menu.tsx
+│   │   │   ├── input.tsx
+│   │   │   ├── scroll-area.tsx
+│   │   │   ├── separator.tsx
+│   │   │   ├── tabs.tsx
+│   │   │   └── tooltip.tsx
+│   │   │
+│   │   └── welcome/
+│   │   │   ├── RecentChats.tsx
+│   │   │   ├── TemplateGallery.tsx
+│   │   │   └── WelcomeHero.tsx
+│   │   │ 
+│   ├── hooks/
+│   │   ├── useConversations.ts
+│   │   ├── useFileUpload.ts
+│   │   ├── useStreamingChat.ts
+│   │   └── useWebSocket.ts
+│   │   
+│   ├── lib/
+│   │   ├── api.ts                     # API client
+│   │   ├── mock-data.ts               # Mock data for local testing 
+│   │   ├── streaming.ts               # SSE/WebSocket utilities
+│   │   └── utils.ts                   # Helper functions
+│   │   
+│   ├── store/
+│   │   └── appStore.ts                # Zustand store
+│   │    
+│   └── types/
+│       └── index.ts
+│ 
+├── .env.local
+├── .gitignore
+├── eslint.config.mjs
+├── next-env.d.ts
+├── next.config.js
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── project_structure.txt
+├── README.md
+├── tailwind.config.ts
+└── README.md
