@@ -47,7 +47,7 @@ function EmptyState() {
       animate={{ opacity: 1, y: 0 }}
       className="flex flex-col items-center justify-center h-full text-center px-4"
     >
-      <h3 className="text-2xl font-semibold text-gold mb-2">How may I help you today?</h3>
+      <h3 className="text-2xl font-semibold text-gold mb-2">How can I help you today?</h3>
       <p className="text-muted-foreground max-w-md">
         Ask questions, generate code, analyze data, or create comprehensive reports.
       </p>
